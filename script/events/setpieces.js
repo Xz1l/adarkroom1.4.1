@@ -13,7 +13,7 @@ Events.Setpieces = {
 				loot: {
 					'cured meat': {
 						min: 5,
-						max: 10,
+						max: 50,
 						chance: 1
 					}
 				},
