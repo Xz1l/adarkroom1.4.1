@@ -86,23 +86,22 @@
       this._debug = this.options.debug;
       this._log = this.options.log;
 
-      // Check for HTML5 support
+      // Check for HTML5 support/检测客户端是否支持HTML5
       if(!Engine.browserValid()) {
         window.location = 'browserWarning.html';
       }
 
-      // Check for mobile
-      if(Engine.isMobile()) {
-        window.location = 'mobileWarning.html';
-      }
+      // Check for mobile/检测客户端是否为手机
+ //     if(Engine.isMobile()) {
+ //       window.location = 'index.html';
+ //     }
+ //     Engine.disableSelection();
 
-      Engine.disableSelection();
-
-      if(this.options.state != null) {
-        window.State = this.options.state;
-      } else {
-        Engine.loadGame();
-      }
+	  if(this.options.state != null) {
+		window.State = this.options.state;
+		} else {
+		  Engine.loadGame();
+		}
 
       // start loading music and events early
       for (var key in AudioLibrary) {
